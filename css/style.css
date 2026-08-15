@@ -244,23 +244,9 @@ button { font: inherit; }
   letter-spacing: 0.05em;
 }
 
-.hero-title {
-  margin: 18px auto 6px;
-  max-width: 900px;
-  width: 78%;
-}
-.hero-title img { width: 100%; height: auto; display: block; margin: 0 auto; }
-
-.hero-sub {
-  margin: 0 auto 28px;
-  width: 320px;
-  max-width: 70%;
-}
-.hero-sub img { width: 100%; height: auto; display: block; margin: 0 auto; }
-
 .hero-dek {
   max-width: 48ch;
-  margin: 0 auto 30px;
+  margin: 18px auto 30px;
   font-size: 1.1rem;
   color: #3d3b58;
 }
@@ -272,6 +258,14 @@ button { font: inherit; }
   flex-wrap: wrap;
 }
 
+/* Dogs + logo/pronunciation guide stacked on top of one another */
+.hero-stack {
+  position: relative;
+  margin: 18px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
 .hero-figures {
   display: flex;
   justify-content: center;
@@ -281,6 +275,31 @@ button { font: inherit; }
   height: auto;
   display: block;
 }
+
+.hero-overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  margin: 0 0 6px;
+  max-width: 900px;
+  width: 78%;
+}
+.hero-title img { width: 100%; height: auto; display: block; margin: 0 auto; }
+
+.hero-sub {
+  margin: 0;
+  width: 320px;
+  max-width: 70%;
+}
+.hero-sub img { width: 100%; height: auto; display: block; margin: 0 auto; }
 
 /* ==========================================================================
    Services preview
