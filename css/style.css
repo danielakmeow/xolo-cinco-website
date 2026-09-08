@@ -427,40 +427,6 @@ button { font: inherit; }
   color: #4a4864;
 }
 
-.work-card .work-includes {
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(32, 31, 58, 0.14);
-  display: grid;
-  gap: 6px;
-}
-.work-card .work-includes li {
-  font-size: 0.85rem;
-  color: var(--color-ink);
-  padding-left: 18px;
-  position: relative;
-}
-.work-card .work-includes li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: var(--color-red);
-  font-weight: 700;
-}
-
-.work-card .work-highlight {
-  display: inline-block;
-  margin-top: 14px;
-  font-family: var(--font-subtitle);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  color: var(--color-navy);
-  background: var(--color-mist);
-  border-radius: 999px;
-  padding: 6px 12px;
-}
-
 @media (max-width: 860px) {
   .work-grid { grid-template-columns: 1fr 1fr; }
 }
