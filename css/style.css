@@ -249,16 +249,27 @@ button { font: inherit; }
 }
 
 .hero-copy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
   max-width: none;
   margin: 20px 0 0;
-  text-align: center;
 }
 .hero-copy p {
-  margin-top: 14px;
+  margin: 0;
   font-size: 1.05rem;
   color: #3d3b58;
+  text-align: justify;
+  text-align-last: left;
 }
-.hero-copy p:first-child { margin-top: 0; }
+
+@media (max-width: 700px) {
+  .hero-copy {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .hero-copy p { text-align: center; text-align-last: auto; }
+}
 
 .hero-location {
   margin: 18px auto 30px;
@@ -291,7 +302,7 @@ button { font: inherit; }
   width: min(1040px, 92vw);
   height: auto;
   display: block;
-  opacity: 0.6;
+  opacity: 0.58;
 }
 
 .hero-overlay {
@@ -316,16 +327,16 @@ button { font: inherit; }
    panel (same treatment as .tile-text-panel) so the pale mist color still
    reads against the paper texture without fully blocking it */
 .hero-sub {
+  display: inline-flex;
   margin: 0;
-  width: 320px;
   max-width: 70%;
   background: rgba(20, 20, 40, 0.35);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   border-radius: 999px;
-  padding: 8px 20px;
+  padding: 6px 16px;
 }
-.hero-sub img { width: 100%; height: auto; display: block; margin: 0 auto; }
+.hero-sub img { width: 260px; max-width: 100%; height: auto; display: block; }
 
 /* Text panel that sits on top of the busy tile texture, for legibility */
 .tile-text-panel {
@@ -397,6 +408,7 @@ button { font: inherit; }
   align-items: center;
   justify-content: center;
   font-family: var(--font-heading);
+  font-weight: 700;
   text-transform: uppercase;
   color: var(--color-navy);
   letter-spacing: 0.05em;
