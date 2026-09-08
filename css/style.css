@@ -363,116 +363,18 @@ button { font: inherit; }
 }
 
 /* ==========================================================================
-   Interior page hero (Services, Case Studies, About, Contact)
+   Services (services.html) — built on the "case study card" pattern:
+   tile-textured section, cream cards with a thumb strip + tag + title.
+   Reused verbatim so a future Case Studies page can share the same look.
    ========================================================================== */
-#page-hero {
-  padding-top: clamp(56px, 9vw, 96px);
-  padding-bottom: 56px;
-}
-.page-hero-inner { max-width: 760px; }
-.page-hero-inner .section-heading { margin-top: 12px; }
-.page-hero-inner .section-lede { margin-top: 16px; max-width: none; }
-
-/* ==========================================================================
-   Services — full list (services.html)
-   ========================================================================== */
-#services-list { padding: 8px 0 84px; }
-
-.service-detail-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-.service-detail-grid > .service-card:last-child { grid-column: 1 / -1; }
-
-.service-card {
-  background: var(--color-cream);
-  border: 2px solid var(--color-ink);
-  border-radius: 6px;
-  padding: 30px 28px;
-  scroll-margin-top: 96px;
-}
-
-.service-card-num {
-  font-family: var(--font-title);
-  color: var(--color-red);
-  font-size: 1.6rem;
-  line-height: 1;
-  display: block;
-}
-
-.service-card-tag {
-  font-family: var(--font-subtitle);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-navy);
-  margin-top: 12px;
-}
-
-.service-card h3 {
-  font-family: var(--font-heading);
-  text-transform: uppercase;
-  font-size: 1.35rem;
-  margin-top: 6px;
-}
-
-.service-card-desc {
-  margin-top: 10px;
-  color: #4a4864;
-  font-size: 0.98rem;
-}
-
-.service-card-includes {
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(32, 31, 58, 0.14);
-  display: grid;
-  gap: 8px;
-}
-.service-card-includes li {
-  font-size: 0.9rem;
-  color: var(--color-ink);
-  padding-left: 20px;
-  position: relative;
-}
-.service-card-includes li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: var(--color-red);
-  font-weight: 700;
-}
-
-.service-highlight {
-  display: inline-block;
-  margin-top: 16px;
-  font-family: var(--font-subtitle);
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  color: var(--color-navy);
-  background: var(--color-mist);
-  border-radius: 999px;
-  padding: 6px 14px;
-}
-
-@media (max-width: 760px) {
-  .service-detail-grid { grid-template-columns: 1fr; }
-  .service-detail-grid > .service-card:last-child { grid-column: auto; }
-}
-
-/* ==========================================================================
-   Case studies preview
-   ========================================================================== */
-#work-preview {
-  padding: 84px 0;
+#services-list {
+  padding: clamp(56px, 9vw, 96px) 0 84px;
   color: var(--color-cream);
 }
 
-#work-preview .section-heading,
-#work-preview .eyebrow { color: var(--color-cream); }
-#work-preview .section-lede { color: #eee6f5; }
+#services-list .section-heading,
+#services-list .eyebrow { color: var(--color-cream); }
+#services-list .section-lede { color: #eee6f5; max-width: 62ch; }
 
 .work-grid {
   display: grid;
@@ -489,6 +391,7 @@ button { font: inherit; }
   text-decoration: none;
   display: block;
   border: 2px solid var(--color-ink);
+  scroll-margin-top: 96px;
 }
 
 .work-card .work-thumb {
@@ -522,6 +425,40 @@ button { font: inherit; }
   margin-top: 8px;
   font-size: 0.92rem;
   color: #4a4864;
+}
+
+.work-card .work-includes {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(32, 31, 58, 0.14);
+  display: grid;
+  gap: 6px;
+}
+.work-card .work-includes li {
+  font-size: 0.85rem;
+  color: var(--color-ink);
+  padding-left: 18px;
+  position: relative;
+}
+.work-card .work-includes li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--color-red);
+  font-weight: 700;
+}
+
+.work-card .work-highlight {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--font-subtitle);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-navy);
+  background: var(--color-mist);
+  border-radius: 999px;
+  padding: 6px 12px;
 }
 
 @media (max-width: 860px) {
