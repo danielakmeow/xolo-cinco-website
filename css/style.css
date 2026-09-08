@@ -249,26 +249,10 @@ button { font: inherit; }
 }
 
 .hero-copy {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  max-width: none;
-  margin: 20px 0 0;
-}
-.hero-copy p {
-  margin: 0;
+  max-width: 620px;
+  margin: 20px auto 0;
   font-size: 1.05rem;
   color: #3d3b58;
-  text-align: justify;
-  text-align-last: left;
-}
-
-@media (max-width: 700px) {
-  .hero-copy {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .hero-copy p { text-align: center; text-align-last: auto; }
 }
 
 .hero-location {
