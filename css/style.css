@@ -238,7 +238,7 @@ button { font: inherit; }
 }
 
 .hero-tagline {
-  margin: 28px auto 0;
+  margin: 44px auto 0;
   max-width: 720px;
   font-family: var(--font-heading);
   font-weight: 700;
@@ -249,26 +249,16 @@ button { font: inherit; }
 }
 
 .hero-copy {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 980px;
+  max-width: 760px;
   margin: 20px auto 0;
-  text-align: left;
+  text-align: center;
 }
 .hero-copy p {
-  margin: 0;
+  margin-top: 14px;
   font-size: 1.05rem;
   color: #3d3b58;
 }
-
-@media (max-width: 700px) {
-  .hero-copy {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    text-align: center;
-  }
-}
+.hero-copy p:first-child { margin-top: 0; }
 
 .hero-location {
   margin: 18px auto 30px;
@@ -320,10 +310,10 @@ button { font: inherit; }
 }
 .hero-title img { width: 100%; height: auto; display: block; margin: 0 auto; }
 
-/* Pronunciation guide sits low, near the dogs' feet */
+/* Pronunciation guide sits just below the dogs' feet */
 .hero-sub {
   position: absolute;
-  bottom: 4%;
+  bottom: -28px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -331,6 +321,18 @@ button { font: inherit; }
   max-width: 70%;
 }
 .hero-sub img { width: 100%; height: auto; display: block; margin: 0 auto; }
+
+/* Text panel that sits on top of the busy tile texture, for legibility */
+.tile-text-panel {
+  display: inline-block;
+  max-width: 62ch;
+  background: rgba(20, 20, 40, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  padding: 26px 30px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
 
 /* ==========================================================================
    Services preview (index.html) — same tile/card pattern as services.html
