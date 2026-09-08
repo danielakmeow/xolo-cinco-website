@@ -226,18 +226,15 @@ button { font: inherit; }
 #hero {
   position: relative;
   overflow: hidden;
-  min-height: calc(100vh - 63px);
-  display: flex;
-  align-items: center;
-  padding-top: clamp(40px, 6vw, 64px);
-  padding-bottom: 40px;
+  padding-top: clamp(56px, 9vw, 96px);
+  padding-bottom: 0;
 }
 
 .hero-inner {
   position: relative;
   z-index: 2;
-  width: 100%;
   text-align: center;
+  padding-bottom: 40px;
 }
 
 .hero-tagline {
@@ -252,10 +249,26 @@ button { font: inherit; }
 }
 
 .hero-copy {
-  max-width: 620px;
-  margin: 14px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  max-width: none;
+  margin: 20px 0 0;
+}
+.hero-copy p {
+  margin: 0;
   font-size: 1.05rem;
   color: #3d3b58;
+  text-align: justify;
+  text-align-last: left;
+}
+
+@media (max-width: 700px) {
+  .hero-copy {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .hero-copy p { text-align: center; text-align-last: auto; }
 }
 
 .hero-location {
@@ -286,10 +299,8 @@ button { font: inherit; }
   justify-content: center;
 }
 .hero-figures img {
-  width: auto;
+  width: min(1040px, 92vw);
   height: auto;
-  max-width: min(1180px, 92vw);
-  max-height: 52vh;
   display: block;
   opacity: 0.58;
 }
