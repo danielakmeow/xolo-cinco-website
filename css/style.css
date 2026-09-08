@@ -238,7 +238,7 @@ button { font: inherit; }
 }
 
 .hero-tagline {
-  margin: 44px auto 0;
+  margin: 74px auto 0;
   max-width: 720px;
   font-family: var(--font-heading);
   font-weight: 700;
@@ -249,8 +249,8 @@ button { font: inherit; }
 }
 
 .hero-copy {
-  max-width: 760px;
-  margin: 20px auto 0;
+  max-width: none;
+  margin: 20px 0 0;
   text-align: center;
 }
 .hero-copy p {
@@ -291,6 +291,7 @@ button { font: inherit; }
   width: min(1040px, 92vw);
   height: auto;
   display: block;
+  opacity: 0.6;
 }
 
 .hero-overlay {
@@ -310,15 +311,19 @@ button { font: inherit; }
 }
 .hero-title img { width: 100%; height: auto; display: block; margin: 0 auto; }
 
-/* Pronunciation guide sits just below the dogs' feet */
+/* Pronunciation guide sits just below the dogs' feet, on its own pill
+   background so the pale mist color still reads against the paper texture */
 .hero-sub {
   position: absolute;
-  bottom: -28px;
+  bottom: -36px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
   width: 320px;
   max-width: 70%;
+  background: var(--color-ink);
+  border-radius: 999px;
+  padding: 10px 22px;
 }
 .hero-sub img { width: 100%; height: auto; display: block; margin: 0 auto; }
 
