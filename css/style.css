@@ -302,9 +302,13 @@ button { font: inherit; }
 .hero-sub img { width: 100%; height: auto; display: block; margin: 0 auto; }
 
 /* ==========================================================================
-   Services preview
+   Services preview (index.html) — same tile/card pattern as services.html
    ========================================================================== */
 #services-preview { padding: 84px 0; }
+
+#services-preview .section-heading,
+#services-preview .eyebrow { color: var(--color-cream); }
+#services-preview .section-lede { color: #eee6f5; }
 
 .services-head {
   display: flex;
@@ -314,53 +318,7 @@ button { font: inherit; }
   flex-wrap: wrap;
   margin-bottom: 44px;
 }
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2px;
-  background: var(--color-ink);
-  border: 2px solid var(--color-ink);
-}
-
-.service-tile {
-  background: var(--color-cream);
-  padding: 26px 22px;
-  min-height: 168px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-decoration: none;
-  color: var(--color-ink);
-  transition: background 0.15s ease, color 0.15s ease;
-}
-.service-tile:hover { background: var(--color-navy); color: var(--color-cream); }
-.service-tile:hover .service-num { color: var(--color-gold); }
-
-.service-num {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  color: var(--color-red);
-  font-size: 0.85rem;
-}
-
-.service-name {
-  font-family: var(--font-heading);
-  text-transform: uppercase;
-  font-size: 1.05rem;
-  letter-spacing: 0.01em;
-  margin-top: 18px;
-}
-
-@media (max-width: 1024px) {
-  .service-grid { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 640px) {
-  .service-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 420px) {
-  .service-grid { grid-template-columns: 1fr; }
-}
+.services-head .btn-ghost { border-color: var(--color-cream); color: var(--color-cream); }
 
 /* ==========================================================================
    Services (services.html) — built on the "case study card" pattern:
