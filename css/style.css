@@ -25,7 +25,7 @@
   --font-heading: "Courier New", Courier, monospace;
   --font-body: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  --container-w: 1180px;
+  --container-w: 1240px;
 }
 
 /* ---- Reset --------------------------------------------------------------- */
@@ -166,7 +166,7 @@ button { font: inherit; }
 #primary-nav ul {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 40px;
 }
 #primary-nav a {
   font-family: var(--font-heading);
@@ -337,7 +337,7 @@ button { font: inherit; }
 /* ==========================================================================
    Services preview (index.html) — same tile/card pattern as services.html
    ========================================================================== */
-#services-preview { padding: 84px 0; }
+#services-preview { padding: clamp(84px, 7vw, 120px) 0; }
 
 #services-preview .section-heading,
 #services-preview .eyebrow { color: var(--color-cream); }
@@ -370,8 +370,8 @@ button { font: inherit; }
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 40px;
+  gap: 30px;
+  margin-top: 44px;
 }
 
 .work-card {
@@ -399,21 +399,21 @@ button { font: inherit; }
   font-size: 0.8rem;
 }
 
-.work-card .work-body { padding: 18px 20px 22px; }
+.work-card .work-body { padding: 24px 26px 28px; }
 .work-card h3 {
   font-family: var(--font-heading);
   text-transform: uppercase;
   font-size: 1.1rem;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 .work-card p {
-  margin-top: 8px;
+  margin-top: 10px;
   font-size: 0.92rem;
   color: #4a4864;
 }
 .work-card .work-capabilities {
-  margin-top: 10px;
-  padding-top: 10px;
+  margin-top: 14px;
+  padding-top: 14px;
   border-top: 1px solid rgba(32, 31, 58, 0.14);
   font-size: 0.82rem;
   color: #6b6890;
@@ -430,7 +430,7 @@ button { font: inherit; }
    About preview
    ========================================================================== */
 #about-preview {
-  padding: 84px 0;
+  padding: clamp(84px, 7vw, 120px) 0;
 }
 #about-story {
   padding: clamp(56px, 9vw, 96px) 0 84px;
@@ -473,7 +473,7 @@ button { font: inherit; }
 /* ==========================================================================
    How it works
    ========================================================================== */
-#how-it-works { padding: 84px 0; }
+#how-it-works { padding: clamp(84px, 7vw, 120px) 0; }
 
 .steps-grid {
   display: grid;
@@ -515,7 +515,7 @@ button { font: inherit; }
 #contact-intro .eyebrow { color: var(--color-cream); }
 #contact-intro .section-lede { color: #eee6f5; }
 
-#contact-details { padding: 84px 0; text-align: center; }
+#contact-details { padding: clamp(84px, 7vw, 120px) 0; text-align: center; }
 
 .contact-details-simple .btn { margin-top: 28px; }
 
@@ -523,7 +523,7 @@ button { font: inherit; }
    Final CTA banner
    ========================================================================== */
 #cta-banner {
-  padding: 90px 0;
+  padding: clamp(90px, 7.5vw, 130px) 0;
   text-align: center;
 }
 #cta-banner .section-heading { color: var(--color-cream); }
