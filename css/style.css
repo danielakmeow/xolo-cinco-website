@@ -234,7 +234,7 @@ button { font: inherit; }
   position: relative;
   z-index: 2;
   text-align: center;
-  padding-bottom: 16px;
+  padding-bottom: 64px;
 }
 
 .hero-tagline {
