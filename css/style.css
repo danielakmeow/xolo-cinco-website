@@ -226,7 +226,7 @@ button { font: inherit; }
 #hero {
   position: relative;
   overflow: hidden;
-  padding-top: clamp(40px, 6vw, 72px);
+  padding-top: clamp(24px, 3vw, 40px);
   padding-bottom: 0;
 }
 
@@ -234,11 +234,11 @@ button { font: inherit; }
   position: relative;
   z-index: 2;
   text-align: center;
-  padding-bottom: 24px;
+  padding-bottom: 16px;
 }
 
 .hero-tagline {
-  margin: 20px auto 0;
+  margin: 14px auto 0;
   max-width: 720px;
   font-family: var(--font-heading);
   font-weight: 700;
@@ -250,13 +250,13 @@ button { font: inherit; }
 
 .hero-copy {
   max-width: 620px;
-  margin: 14px auto 0;
+  margin: 10px auto 0;
   font-size: 1.05rem;
   color: #3d3b58;
 }
 
 .hero-location {
-  margin: 12px auto 20px;
+  margin: 8px auto 14px;
   font-family: var(--font-subtitle);
   font-size: 0.85rem;
   letter-spacing: 0.03em;
@@ -273,7 +273,7 @@ button { font: inherit; }
 /* Dogs + logo/pronunciation guide stacked on top of one another */
 .hero-stack {
   position: relative;
-  margin: 12px auto 0;
+  margin: 8px auto 0;
   display: flex;
   justify-content: center;
 }
@@ -285,8 +285,8 @@ button { font: inherit; }
 .hero-figures img {
   width: auto;
   height: auto;
-  max-width: min(760px, 78vw);
-  max-height: 42vh;
+  max-width: min(920px, 86vw);
+  max-height: 48vh;
   display: block;
   opacity: 0.58;
 }
