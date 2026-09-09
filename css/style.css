@@ -283,10 +283,8 @@ button { font: inherit; }
   justify-content: center;
 }
 .hero-figures img {
-  width: auto;
+  width: min(1040px, 92vw);
   height: auto;
-  max-width: min(920px, 86vw);
-  max-height: 48vh;
   display: block;
   opacity: 0.58;
 }
